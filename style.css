@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  background: url('https://img.pikbest.com/photo/20240928/empty-table-top-with-blurred-fruits-shelf-in-supermarket-background_10906407.jpg!bw700') 
+              no-repeat center center/cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 40px;
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.exit-validation {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.exit-validation img {
+  width: 18px;
+  filter: invert(1);
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.text-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+.login-section {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  color: #333;
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.icon-circle img {
+  width: 35px;
+}
+
+.red {
+  background-color: #b82323;
+}
+
+.green {
+  background-color: #1f8a33;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.member-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.admin-btn {
+  width: 100%;
+  padding: 10px 0;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 17px;
+}
+
+.member-btn {
+  background-color: #b82323;
+}
+
+.admin-btn {
+  background-color: #1f8a33;
+}
+
+.member-btn:hover {
+  background-color: #a71e1e;
+}
+
+.admin-btn:hover {
+  background-color: #157027;
+}
+
+.member-btn:hover,
+.admin-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.member-btn,
+.admin-btn {
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .text-section h2 {
+    font-size: 2rem;
+  }
+  .login-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ===== Member Login Page ===== */
+
+.login-page {
+  background: url('https://img.pikbest.com/photo/20240928/empty-table-top-with-blurred-fruits-shelf-in-supermarket-background_10906407.jpg!bw700')
+              no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #333;
+}
+
+.back-home {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+
+.back-home a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+.back-home img {
+  width: 18px;
+  filter: invert(1);
+}
+
+.login-container {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 380px;
+  padding: 40px 45px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.login-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #b82323;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.login-icon img {
+  width: 35px;
+}
+
+.login-card h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.subtitle-text {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.input-wrapper img {
+  width: 18px;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.input-wrapper input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.form-group small {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 10px 0 25px;
+}
+
+.options label {
+  color: #444;
+}
+
+.forgot {
+  color: #b82323;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.member-login-btn {
+  width: 100%;
+  background-color: #b82323;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.member-login-btn:hover {
+  background-color: #9f1e1e;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Admin Login Customizations */
+.admin-login-page {
+  background: linear-gradient(135deg, #0f172a, #111827);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #333;
+}
+
+/* Back to Home link */
+.admin-back-home {
+  position: absolute;
+  top: 25px;
+  left: 35px;
+}
+
+.admin-back-home a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+.admin-back-home img {
+  width: 18px;
+  filter: invert(1);
+}
+
+.admin-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-login-card {
+  background-color: #fff;
+  border-radius: 15px;
+  width: 380px;
+  padding: 40px 45px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* Green icon for Admin */
+.admin-login-icon {
+  width: 70px;
+  height: 70px;
+  background-color: #1f8a33;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.admin-login-icon img {
+  width: 35px;
+}
+
+/* Headings */
+.admin-login-card h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.admin-login-card .subtitle-text {
+  text-align: center;
+  color: #555;
+  font-size: 0.95rem;
+  margin-bottom: 30px;
+}
+
+/* Form */
+.admin-form-group {
+  margin-bottom: 20px;
+}
+
+.admin-form-group label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.admin-input-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.admin-input-wrapper img {
+  width: 18px;
+  margin-right: 10px;
+  opacity: 0.6;
+}
+
+.admin-input-wrapper input {
+  border: none;
+  background: none;
+  outline: none;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+.admin-form-group small {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+/* Forgot password + button */
+.admin-options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.9rem;
+  margin: 10px 0 25px;
+}
+
+.admin-forgot {
+  color: #1f8a33;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.admin-forgot:hover {
+  text-decoration: underline;
+}
+
+/* Login button */
+.admin-login-btn {
+  width: 100%;
+  background-color: #1f8a33;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.admin-login-btn:hover {
+  background-color: #16692a;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(19, 138, 54, 0.3);
+}

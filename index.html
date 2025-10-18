@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LANDERS | RFID Self-Checkout System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="https://img.icons8.com/m_outlined/200w/FA5252/online-store.png" alt="Logo">
+      <h1>LANDERS</h1>
+      <span class="subtitle">Self-Checkout System</span>
+    </div>
+    <div class="exit-validation">
+      <span>Exit Validation</span>
+      <img src="https://cdn-icons-png.flaticon.com/512/861/861377.png" alt="Shield Icon">
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="text-section">
+      <h2>RFID Self-Checkout System</h2>
+      <p>Fast, Secure, and Contactless Shopping Experience</p>
+    </div>
+
+    <div class="login-section">
+      <div class="card member-card">
+        <div class="icon-circle red">
+          <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" alt="Member Icon">
+        </div>
+        <h3>Member Login</h3>
+        <p>Access your account and start shopping with our RFID self-checkout</p>
+        <button class="member-btn" onclick="window.location.href='member-login.html'">Login as Member</button>
+      </div>
+
+      <div class="card admin-card">
+        <div class="icon-circle green">
+          <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="Admin Icon">
+        </div>
+        <h3>Admin Login</h3>
+        <p>Manage inventory, transactions, and monitor system security</p>
+        <button class="admin-btn" onclick="window.location.href='admin-login.html'">Login as Admin</button>
+      </div>
+    </div>
+  </main>
+</body>
+</html> 
